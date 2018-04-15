@@ -1,8 +1,8 @@
 from django.urls import path
 
-from . import views
+from .views import Homepage, BookingView
 
 urlpatterns = [
-    path('', views.homepage, name='homepage'),
-    path('booking', views.booking, name = 'booking_form')
+    path('', Homepage, name='homepage'),
+    path('bookings/',BookingView.as_view() , name = 'booking_form')
 ]
